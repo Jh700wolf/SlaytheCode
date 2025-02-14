@@ -18,8 +18,8 @@
             <hr/>
             <h2>Preguntas de HTML</h2>
             <p>
-                <span><strong>1. ¿Cuál es la diferencia entre Internet y 
-                la World Wide Web?</strong></span> 
+                <strong>1. ¿Cuál es la diferencia entre Internet y 
+                la World Wide Web?</strong>
             </p>
             <p>La diferencia entre estas dos es que el Internet es una red de 
                 computadoras conectadas alrededor del mundo. Y la World Wide Web <br/>
@@ -27,7 +27,7 @@
                 que la conforman).
             </p>
             <p>
-                <span><strong>2. ¿Cuáles son las partes de un URL?</strong></span> 
+                <strong>2. ¿Cuáles son las partes de un URL?</strong>
             </p>
             <p>
                 Los URLS se componen de lo siguiente: <br/>
@@ -37,7 +37,7 @@
                 <strong> Parametros: </strong> Data adicional para identificar/filtrar el recurso en el servidor. <br/>
             </p>
             <p>
-                <span><strong>3.¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></span> 
+                <strong>3.¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong>
             </p>
             <p>
                 Los metodos tienen su siguiente función: <br/>
@@ -51,47 +51,100 @@
 
             </p>
             <p>
-                <span><strong>4.¿Qué método HTTP se utiliza cuando a través de un navegador web 
-                    se accede a una página a través de un URL?</strong></span> 
+                <strong>4.¿Qué método HTTP se utiliza cuando a través de un navegador web 
+                    se accede a una página a través de un URL?</strong>
             </p>
             <p>
-                <span><strong>5.Un servidor web devuelve una respuesta HTTP con código 200. 
-                    ¿Qué significa esto? ¿Ocurrió algún error?</strong></span> 
+                En este caso se utiliza el método de GET. El navegador envía un GET para obtener la información de la página y mostrarlo al usuario. 
+            </p>
+            <p>
+                <strong>5.Un servidor web devuelve una respuesta HTTP con código 200. 
+                    ¿Qué significa esto? ¿Ocurrió algún error?</strong>
             </p>
             <p>
                 El código 200 significa que no hubo problema alguno, y que la solicitud se ha llevado con éxito.
             </p>
             <p>
-                <span><strong>6.¿Es responsabilidad del desarrollador corregir un sitio web 
-                    si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></span> 
+                <strong>6.¿Es responsabilidad del desarrollador corregir un sitio web 
+                    si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong>
             </p>
             <p> 
                 No, no es responsabilidad del desarrollador porque esto es un error del cliente: escribió mal el URL, 
                 está intentando entrar a algo a lo que no tiene acceso, etc.
             </p>
             <p>
-                <span><strong>7. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio
-                     y se encontró con un error 500? ¿Por qué?</strong></span> 
+                <strong>7. ¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio
+                     y se encontró con un error 500? ¿Por qué?</strong>
             </p>
             <p>
                 Si, en este caso el error es por parte del servidor, y el cliente no tiene la culpa. 
                 El desarrollador debe corregir los errores para quitar el error.  
             </p>
             <p>
-                <span><strong>8. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></span> 
+                <strong>8. ¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong>
             </p>
             <p>
                 Un elemento/atributo desaprobado es aquel que ha quedado anticuado, por ejemplo, por pasar de HMTL4 a HTML5. 
             </p>
             <p>
-                <span><strong>9.¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></span> 
+                <strong>9.¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong>
             </p>
             <p>
                 Hay varias diferencias entre estas dos versiones. La primera, por ejemplo, es que HTML 4 es más compatible con navegadores viejos. <br/> 
                 Pero por el otro lado, HTML maneja mejor el soporte multimedia. Finalmente, está el cambio en los atributos. 
             </p>
-            <span><strong>10.¿Qué componentes de estructura y estilo tiene una tabla?</strong></span> 
+            <p>
+                <strong>10.¿Qué componentes de estructura y estilo tiene una tabla?</strong>
+            </p>
+            <p>
+                Las tablas en HTML estan compuestas de las siguientes partes:<br/>
+                <strong>Table Data/Cells (td): </strong> Representan cada una de las celdas de la tabla.<br/>
+                <strong> Table Rows (tr): </strong> Representan cada una de las filas de la tabla.<br/>
+                <strong> Table Headers: </strong> Conviertes a una de las celdas en "headers"<br/>
+                Al igual que los documentos HTML, igual se tiene un <strong> Head, Body y Foot</strong>.<br/>
+                Tambien se puede agregar bordes a una tabla usando <strong> border </strong>, este estilo se le puede agregar a la tabla, los th y los td.<br/>
+                Aqui pongo una tabla de ejemplo:
+            </p>
+            <h2>Tabla: </h2>
+            <table style="border: 1px solid black;">
+                <tr>
+                    <th>Alumno</th>
+                    <th>Matricula</th>
+                </tr>
+                <tr>
+                    <td> José Pablo González Ávila</td>
+                    <td> A01706819</td>
+                </tr>
+            </table>
+            <p>
+                <strong>11.¿Cuáles son los principales controles de una forma HTML5?</strong>
+            </p>
+            <p>
+                HTML tiene la siguiente estructura: 
+            </p>
+            <p>
+                <strong> DOCTYPE: </strong> Determina la versión de HTML que se está usando. <br/>
+                <strong> html: </strong> Tiene todo el contenido de la página, y da información sobre la version de html que se usa en el doc. <br/>
+                <strong> head: </strong> Contiene la información, metadatos, y enlaces a los css y a los scripts de Javascripts etc. <br/>
+                <strong> title: </strong> Es el que le da el nombre a la página en el navegador/ resultados de búsqueda. <br/>
+                <strong> Body: </strong> Contiene todos los elementos visibles de la página como imágenes, texto, tablas, etc. <br/>
 
+
+            </p>
+            <p>
+                <strong>12. ¿Cuál es el ciclo de vida de los sistemas de información? </strong>
+            </p>
+            <p>
+                Estas son las fases de la vida de un sistema de información <br/>
+                <strong> Planificación: </strong> Se debe enfocar en lo que el sistema debe de lograr y encontrar la forma para lograr este objetivo.<br/>
+                <strong> Análisis de requerimientos:  </strong>Se elabora una lista de todo lo que necesita la empresa para poder desarrollar el sistema.
+                Luego se estudia la factibilidad para garantizar que esto haga sentido financieramente, tecnológicamente y organizativamente. <br/>
+                <strong> Diseño: </strong> Aborda el diseño de la arquitectura del sistema (interfaces, red de computadoras, base de datos, etc). <br/>
+                <strong> Desarollo: </strong> Se comienza con el desarrollo del sistema, con los ingenieros y programadores escribiendo el código e integrando las tecnologías al proyecto de acuerdo al plan establecido. <br/>
+                <strong> Prueba: </strong> El sistema se prueba de manera exhaustiva en distintos escenarios. En caso de error, el equipo debe de encontrar la forma de arreglarlo sin alterar lo demás. <br/>
+                <strong> Integración y ejecución: </strong> Aquí el sistema ya se lanza a sus usuarios finales, integrando cualquier información y componentes de sistemas anteriores (si los hay) al nuevo sistema. <br/>
+                <strong> Operación y mantenimiento: </strong> En esta última fase se tiene que trabajar en reparar errores, darle mantenimiento al sistema, analizar si está trayendo beneficios a la empresa (lo que se esperaba inicialmente), actualizarse con nuevas funciones, etc.
+            </p>        
         </div>
         <hr/>
         
@@ -99,7 +152,18 @@
     <footer>
         <p>
             <h1> Referencias: </h1>
-
+            <p>
+                Aviani, G. (2019). An introduction to HTTP: everything you need to know. Free Code Camp. 
+                <a href="https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/">https://www.freecodecamp.org/news/http-and-everything-you-need-to-know-about-it/</a> <br/>
+                mdn web docs. (2024). HTTP request methods.<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods</a> <br/>
+                mdn web docs. (2024). Códigos de estado de respuesta HTTP. <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Status">https://developer.mozilla.org/es/docs/Web/HTTP/Status</a><br/>
+                W3 Schools. (s.f.) HTML Tables. <a href="https://www.w3schools.com/html/html_tables.asp">https://www.w3schools.com/html/html_tables.asp</a><br/>
+                Desarolladora Web. (s.f.) HTML5 vs. HTML4: ¿Cuál es la diferencia? <a href="https://desarrolladoraweb.com/blog/html5-vs-html4-cual-es-la-diferencia">https://desarrolladoraweb.com/blog/html5-vs-html4-cual-es-la-diferencia</a><br/>
+                Sy, H. (s.f.) Ciclo de vida de un sistema de información (Fases). Lifeder. <a href="https://www.lifeder.com/ciclo-vida-sistema-informacion/#:~:text=Fases%20del%20ciclo%20de%20vida%20de%20los%20sistemas,y%20ejecuci%C3%B3n%20...%207%20Operaci%C3%B3n%20y%20mantenimiento%20">
+                    https://www.lifeder.com/ciclo-vida-sistema-informacion/#:~:text=Fases%20del%20ciclo%20de%20vida%20de%20los%20sistemas,y%20ejecuci%C3%B3n%20...%207%20Operaci%C3%B3n%20y%20mantenimiento%20
+                </a><br/>
+                Cyberstream. (2024). ¿Cuál es la estructura basica de HTML5?. BYRON VARGAS. <a href="https://www.byronvargas.com/web/cual-es-la-estructura-basica-de-html5/">https://www.byronvargas.com/web/cual-es-la-estructura-basica-de-html5/</a><br/>
+            </p>
             <strong>Ide Usado:</strong> Visual Studio Code
             <a href="https://code.visualstudio.com/">Link a IDE</a>
         </p>
