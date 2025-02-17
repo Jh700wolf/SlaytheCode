@@ -1,6 +1,7 @@
 header{
     background-color: #263d36;
 }
+
 body{
     margin: 0 auto;
     max-width: 50em;
@@ -9,6 +10,8 @@ body{
     padding: 4em 1em;
     color: #413040
 }
+#lab2{color: #f4d1a9}
+p.referencias{ font-size: 7pt;}
 h1,
 h2,
 strong {
@@ -17,7 +20,9 @@ strong {
 a {
     color: #b9a173;
   }
-
+table{
+  border: 1px solid black;
+}
   code,
 pre {
   background: #ffefa9;
