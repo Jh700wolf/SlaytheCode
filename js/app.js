@@ -7,9 +7,15 @@ function promedio(array){
     return total/size;
 }
 
+function escribir(str){
+    const file_system=require('fs');
+    file_system.writeFileSync('Lab8.txt', str);
+}
+
 var array1= new Array(4,2,7,4,1,2,1,9,8,11);
 const file_system=require('fs');
 file_system.writeFileSync('hola.txt', 'Hola desde node');//Este es syncronico
+escribir("Prueba de problema 2");
 setTimeout(()=>{console.log("UwU")},10000);
 
 const http = require('http');
