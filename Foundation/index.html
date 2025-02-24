@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 5: Foundation</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+<body>
+    <!--TYPOGRAPHY-->
+    <div class="row">
+        <!--HEADING-->
+        <h1>Lab 5 <small>Foundation</small></h1>
+        <h2>H2 <small>small de h2</small></h2>
+        <h3 class="subheader">Subheader</h3>
+        <!--PARAGRAPHS-->
+        <p>
+            Esto es un texto para un parrafo. Esta prueba me va a ayudar a ver como se veria en el codigo. <strong>Aqui es strong</strong>.
+            <a href="https://get.foundation/sites/docs/index.html">Descargar Foundation.</a>
+        </p>
+        <p class="lead">Esto es un texto para un parrafo con clase lead. Esta prueba me va a ayudar a ver como se veria en el codigo. <strong>Aqui es strong</strong>.
+            <a href="https://get.foundation/sites/docs/index.html">Descargar Foundation.</a>
+        </p>
+        <p>
+            Prueba de clase stats:
+        </p>
+        <div class="stat">
+            230
+        </div>
+        <hr>
+
+        <!--ALIGNMENT CLASSES-->
+        <p class="text-left">Texto a la izq.</p>
+        <p class="text-center">Texto centrado</p>
+        <p class="text-right">Texto a la derecha</p>
+        <p class="text-justify">Justificado</p>
+
+        <!--FLOAT-->
+        <div class="callout clearfix">
+            <a class="button float-left">Izquierda</a>
+            <a class="button float-right">Derecha</a>
+        </div>
+
+        <hr>
+        <!--CODE-->
+        <code>&lt;div class="myClass"&gt; Hola Mundo!&lt;/div&gt;</code>
+        <p>Igual puedes señalar teclas como <kbd>Cmd+r</kbd></p>
+
+            <hr>
+
+        <!--BLOCKQUOTE-->
+            <blockquote>
+                Este es un blockquote de foundation.
+                <cite>Pancho Villa</cite>
+            </blockquote>
+
+        <!--LIST-->
+        <ul>
+            <li>Uno</li>
+            <li>Dos</li>
+            <ul>
+                <li>Dos y medio</li>
+            </ul>
+        </ul>
+        <ol>
+            <li>Perro</li>
+            <li>Gatos</li>
+            <li>Zuky</li>
+            </ol>
+
+        <!--VISIBILITY-->
+        <p class="hide">Oculto???</p>
+        <p class="invisible">No me veo, pero estoy</p>
+        <p class="show-for-medium">Solo en pantallas medianas o mas grandes me veo.</p>
+        <p class="show-for-small">Solo en pantallas chicas o mas grandes me veo.</p>
+        <p class="hide-for-small-only">Si es pantalla chica no me ves!!!</p>
+        <p class="hide-for-medium-only">Si es pantalla mediana no me ves!!!</p>
+        <p class="show-for-landscape">Solo Lanscapeview bro.</p>
+        <p class="show-for-portrait">Solo Portrait bro.</p>
+    </div>
+    <hr>
+    <div class="row">
+        <!--BUTTONS-->
+        <button class="button">Boton Estandar</button>
+        <a href="https://codeburst.io/5-javascript-style-guides-including-airbnb-github-google-88cbc6b2b7aa" class="button">Link</a>
+        <input type="button" value="Input" class="button">
+        <br>
+
+        <!--COLORED BUTTONS-->
+        <button class="success button">Boton Verde</button>
+        <button class="alert button">Boton Rojo</button>
+        <button class="warning button">Boton Amarillo</button>
+        <button class="secondary button">Boton Gris</button>
+        <br>
+        <!--BUTTON SIZES-->
+        <button class="button disabled">Ama, no sirvo</button>
+        <button class="button tiny">Boton mini</button>
+        <button class="alert button tiny">Sirvo en los otros</button>
+        <button class="button small">Boton chico</button>
+        <button class="button large">Boton Grande</button>
+        <button class="button expanded">Boton largo</button>
+        <button class="button expanded large">Boton sin personalidad</button>
+        <br>
+        <!--HOLLOW-->
+        <button class="success button hollow">Boton Verde</button>
+        <button class="alert button hollow">Boton Rojo</button>
+        <button class="warning button hollow">Boton Amarillo</button>
+        <button class="secondary button hollow">Boton Gris</button>
+    </div>
+    <div class="row">
+        <!--FORMS-->
+        <form>
+            <div>
+                <label> Nombre: </label>
+                <input type="text" placeholder="Nombre">
+                <label>Número:</label>
+                <input type="number">   
+            </div>
+            <div>
+                <label>Color de MTG:</label>
+                <select>
+                    <option> Blanco</option>
+                    <option> Negro</option>
+                    <option> Azul</option>
+                </select>
+            </div>
+            <div>
+                <label>Color de MTG:</label>
+                <select multiple>
+                    <option> Blanco</option>
+                    <option> Negro</option>
+                    <option> Azul</option>
+                </select>
+            </div>
+            <!--UPLOAD FILES FRONT-->
+            <label for="fileUpload" class="button">Subir archivo</label>
+            <input type="file" id="fileUpload" class="show-for-sr">
+
+
+            <label> Nombre: </label>
+            <input type="text" placeholder="Nombre">
+            <p class="help-text">Todo en minusculas porfa pana.</p>
+
+            <div class="input-group">
+                <input class="input-group-field" type="email">
+                <div class="input-group-button">
+                    <input type="submit" class="button" value="Submit">
+                </div>
+            </div>
+
+            <div class="switch">
+                <input class="switch-input" id="mySwitch" type="checkbox" name="switch ejemplo">
+                <label class="switch-paddle" for="mySwitch">
+                    <span class="show-for-sr">Enabled</span>
+                </label>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
