@@ -5,7 +5,7 @@ const html_header = `
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lab 5: Foundation</title>
+        <title>Lab 10</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites/dist/css/foundation.min.css">
     </head>
     <body>
@@ -29,9 +29,19 @@ const html_form = `
                 <input class="button" type="submit" value="Enviar">
 
             </form>
-
+        </div>
+        <div>
+            <form action="/opiniones" method="POST">
+                <Label>Dame tu opinion de la página:</Label>
+                <input type="text" placeholder="Escribe aqui..." id="opinion" name="opinion">
+                <div class="input-group-button">
+                    <input type="submit" class="button" value="Enviar">
+                </div>
+            </form>
         </div>
     </body>`;
+
+const html_EPIC = '';
 
 const html_footer = ``;
 
@@ -46,7 +56,16 @@ const server = http.createServer( (request, response) => {
     response.setHeader('Content-Type', 'text/html');
     response.write(html_header + html_form + html_footer);
     response.end();
-  } else if(request.method == "POST" && request.url == "/agregar") {
+  } 
+  else if(request.method == "POST" && request.url=="/opiniones"){
+    const datos_completos=[];
+    request.on('data',(data)=>{
+        console.log(data);
+        
+    })
+  }
+  
+  else if(request.method == "POST" && request.url == "/agregar") {
     
     const datos_completos = [];
 
