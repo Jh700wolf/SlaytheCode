@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Jh700wolf/SlaytheCode/issues"
   },
-  "homepage": "https://github.com/Jh700wolf/SlaytheCode#readme"
+  "homepage": "https://github.com/Jh700wolf/SlaytheCode#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
