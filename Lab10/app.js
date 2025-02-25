@@ -166,15 +166,15 @@ app.use((request, response, next) => {
     console.log('Middleware!');
     next(); //Le permite a la petición avanzar hacia el siguiente middleware
 });
-
-app.use('/agregar',(request, response, next)=>{
+app.get('/agregar',(request, response, next)=>{
   response.send(html_header+html_form);
 });
-
 app.use((request, response, next) => {
     console.log('Otro middleware!');
     response.send('¡Hola mundo!'); //Manda la respuesta. Es la combinacion de setheader, write y end
 });
+
+
 
 app.listen(3000);
 
