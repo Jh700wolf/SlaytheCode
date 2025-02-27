@@ -1,4 +1,5 @@
 const express = require('express');
+
 const router = express.Router();
 
 const html_header = `
@@ -25,7 +26,7 @@ const html_header = `
 const html_form = `        
 <!--FORM-->
         <div>
-            <form action="/agregar" method="POST">
+            <form action="/agregar/notas" method="POST">
                 <Label>Nombre:</Label>
                 <input type="text" placeholder="Nombre" id="nombre" name="nombre">
                 <input class="button" type="submit" value="Enviar">
@@ -49,12 +50,12 @@ const html_form = `
 const notas = [];
 
 //app.get es para registrar un middleware para peticiones http get.
-router.get('/agregar',(request, response, next)=>{
+router.get('/notas',(request, response, next)=>{
     response.send(html_header+html_form);
   });
   
   //app.post es para registrar un middleware para peticiones http post.
-router.post('/agregar',(request, response, next)=>{
+router.post('/notas',(request, response, next)=>{
     console.log(request.body);
     notas.push(request.body.nombre);
     let html=html_header;
@@ -63,6 +64,12 @@ router.post('/agregar',(request, response, next)=>{
       html+=nota;
     }
     response.send(html);
+  });
+
+  const path = require("path");
+  router.get("/agregar",(request, response, next)=>{
+    response.sendFile(path.join(__dirname, "..","views","index.html"));
+
   });
 
   module.exports = router;
