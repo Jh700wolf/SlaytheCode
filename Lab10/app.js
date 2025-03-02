@@ -53,7 +53,11 @@ const html_footer ="";
 
 const notas = [];
 
+const opiniones=[];
+
 const http = require('http');
+
+
 
 const server = http.createServer( (request, response) => {  
   
@@ -67,8 +71,30 @@ const server = http.createServer( (request, response) => {
     const datos_completos=[];
     request.on('data',(data)=>{
         console.log(data);
+        datos_completos.push(data);
+    });
+    request.on('end', () => {
+        const string_datos_completos = Buffer.concat(datos_completos).toString();
+        console.log(string_datos_completos);
+        const nueva_opinion = string_datos_completos.split('=')[1];
+  
+        opiniones.push(nueva_opinion);
+  
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html_header);
         
-    })
+        response.write(`<div class="row">`);
+        const fs=require("node:fs");
+        for(const opinion of opiniones) {
+          fs.appendFileSync("opinion.txt",opinion+"\n");
+        }
+        response.write(`Se cargo tu opinion!</div>`);
+  
+        response.write(html_footer);
+        response.end();
+  });
+  
+
   }
   
   else if(request.method == "POST" && request.url == "/agregar/notas") {
@@ -78,6 +104,8 @@ const server = http.createServer( (request, response) => {
     request.on('data', (data)=>{
       console.log(data);
       datos_completos.push(data);
+
+      
     });
 
     request.on('end', () => {
