@@ -21,8 +21,10 @@ const html_header=  `
                 </div>
                 <div class="top-bar-right">
                     <ul class="menu">
-                    <li><input type="search" placeholder="Search"></li>
-                    <li><button type="button" class="button">Search</button></li>
+                    <form action="/agregar/busqueda" method="POST">
+                        <li><input type="search" placeholder="Buscar?"></li>
+                        <li><button type="submit" class="button">Buscar</button></li>
+                    </form>
                     </ul>
                 </div>
                 </div>
@@ -66,7 +68,7 @@ const server = http.createServer( (request, response) => {
     response.setHeader('Content-Type', 'text/html');
     response.write(html_header + html_form + html_footer);
     response.end();
-  } 
+  }
   else if(request.method == "POST" && request.url=="/agregar/opiniones"){
     const datos_completos=[];
     request.on('data',(data)=>{
@@ -97,6 +99,20 @@ const server = http.createServer( (request, response) => {
 
   }
   
+  else if(request.method=="POST" && request.url=="/agregar/busqueda"){
+    const datos=[];
+    request.on('data',(data)=>{
+        console.log(data);
+        datos.push(data);
+    });
+
+    request.on('end',()=>{
+        response.setHeader('Content-Type', 'text/html');
+        response.write(html_header);
+        response.write("La funcion de busqueda aun no esta disponible. Perdon!")
+
+    });
+  }
   else if(request.method == "POST" && request.url == "/agregar/notas") {
     
     const datos_completos = [];
