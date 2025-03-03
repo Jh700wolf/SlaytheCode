@@ -19,7 +19,11 @@ app.use((request, response, next) => {
 
 const notasRoutes=require('./routes/notas.routes');
 
-app.use("/agregar", notasRoutes);
+const opinionesRoutes=require('./routes/opiniones.routes');
+
+app.use("/notas", notasRoutes);
+
+app.use("/opiniones", opinionesRoutes);
 
 app.use((request, response, next) => {
     console.log('Otro middleware!');
