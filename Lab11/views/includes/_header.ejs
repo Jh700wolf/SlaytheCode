@@ -9,11 +9,22 @@
     </head>
     <body>
         <div class="grid-x">
-            <div class="cell small-6"><h1>Laboratorio 10</h1></div>
-            <div class="cell small-6">
-                <div class="button-group">
-                    <a class="large button" href="https://get.foundation/sites/docs/kitchen-sink.html">Hola</a>
-                    <a class="large button" href="https://get.foundation/sites/docs/xy-grid.html">Adios</a>
+                <div class="top-bar">
+                <div class="top-bar-left">
+                    <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">Bienvenido a mi Lab 10!</li>
+                    <li><a href="https://get.foundation/sites/docs/kitchen-sink.html">Kitchen Sink de Foundation</a></li>
+                    <li><a href="https://get.foundation/sites/docs/xy-grid.html">Guia para el xy grid</a></li>
+                    <li><a href="https://get.foundation/sites/docs/dropdown-menu.html">Guia para el menu</a></li>
+                    </ul>
                 </div>
-            </div>
+                <div class="top-bar-right">
+                    <ul class="menu">
+                    <form action="/agregar/busqueda" method="POST">
+                        <li><input type="search" placeholder="Buscar?"id="busqueda" name="busqueda"></li>
+                        <li><button type="submit" class="button">Buscar</button></li>
+                    </form>
+                    </ul>
+                </div>
+                </div>
         </div>
