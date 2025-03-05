@@ -16,6 +16,13 @@
                     <li><a href="https://get.foundation/sites/docs/kitchen-sink.html">Kitchen Sink de Foundation</a></li>
                     <li><a href="https://get.foundation/sites/docs/xy-grid.html">Guia para el xy grid</a></li>
                     <li><a href="https://get.foundation/sites/docs/dropdown-menu.html">Guia para el menu</a></li>
+                    <% if (isLoggedIn) { %>
+                        <li><a href="/plantas/agregar">Agregar Planta</a></li>
+                        <li><a href="/users/logout" class="button">LOGOUT</a></li>
+                        <li><stong><%= username %></stong></li>
+                    <% } else { %>
+                        <li><a href="/users/login" class="button">LOGIN</a></li>
+                    <% } %>
                     </ul>
                 </div>
                 <div class="top-bar-right">
