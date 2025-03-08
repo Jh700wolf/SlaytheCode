@@ -4,7 +4,7 @@ const router = express.Router();
 
 const notas_controllers=require('../controllers/notas.controllers');
 //app.get es para registrar un middleware para peticiones http get.
-router.get('/menu',notas_controllers.get_agregar_notas);
+router.get('/agregar',notas_controllers.get_agregar_notas);
   
   //app.post es para registrar un middleware para peticiones http post.
 router.post('/agregar', notas_controllers.post_agregar_notas);

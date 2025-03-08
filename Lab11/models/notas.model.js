@@ -1,4 +1,4 @@
-const notas = [{nombre:"Hola"}];
+const db=require('../util/database')
 
 module.exports = class Nota{
     constructor(mi_nombre){
@@ -6,11 +6,12 @@ module.exports = class Nota{
     }
 
     save(){
-        notas.push(this);
+        return db.execute('INSERT INTO notas(nombre) VALUES(?)', [this.nombre]);
+            
     }
 
     static fetchAll(){
-        return notas;
+        return db.execute('SELECT * FROM notas');
     }
 
 }
