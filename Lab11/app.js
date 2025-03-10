@@ -32,9 +32,13 @@ const notasRoutes=require('./routes/notas.routes');
 
 const opinionesRoutes=require('./routes/opiniones.routes');
 
+const menuRoutes=require('./routes/menu.routes')
+
 app.use("/notas", notasRoutes);
 
 app.use("/opiniones", opinionesRoutes);
+
+app.use("/", menuRoutes);
 
 app.use((request, response, next) => {
     console.log('Otro middleware!');
