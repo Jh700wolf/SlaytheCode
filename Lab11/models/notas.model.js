@@ -14,4 +14,8 @@ module.exports = class Nota{
         return db.execute('SELECT * FROM notas');
     }
 
+    static retryNota(){
+        return db.execute
+    }
+
 }
