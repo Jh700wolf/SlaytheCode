@@ -22,7 +22,7 @@ exports.get_opinion = (request, response, next)=>{
 
 exports.get_agregar_opinion = (request, response, next)=>{
     console.log(request.session.username);
-    response.render("menu_principal",{
+    response.render("agregar_opinion",{
       isLoggedIn: request.session.isLoggedIn || false,
       username: request.session.username||'',
   });
