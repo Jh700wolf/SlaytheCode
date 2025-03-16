@@ -19,6 +19,10 @@ const bodyParser=require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: false}));
 
+const csrf = require('csurf');
+const csrfProtection = csrf(); 
+app.use(csrfProtection); 
+
 const usersRoutes =require('./routes/users.routes');
 app.use("/users", usersRoutes);
 
