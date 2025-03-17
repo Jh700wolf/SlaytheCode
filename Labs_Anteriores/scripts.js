@@ -10,6 +10,15 @@ function contador(arreglo){
     return n;
 }
 
+function promedio(arreglo){
+    let total=0;
+    let nums=arreglo.length;
+    for (let num of arreglo){
+        total+=num;
+    }
+    return (total/nums)
+}
+
 function inverso(numero){
     let n = numero.toString();
     let tamaño = n.length;
@@ -34,6 +43,8 @@ for(let i=1; i<=pregunta1;i++){
 }
 alert("La lista de numeros es: " + numeros);
 document.write(numeros)
+
+
 console.log("Problema 2");
 var n1 = Math.floor(Math.random()*11);
 var n2 = Math.floor(Math.random()*11);
@@ -42,7 +53,7 @@ var pregunta2 = prompt("Dame la suma de:"+n1+"+"+n2);
 var tiempofinal=new Date();
 
 var tiempoTotal=(tiempofinal.getSeconds()-tiempoinicio.getSeconds());
-if (pregunta2=n1+n2){
+if (pregunta2==n1+n2){
     alert("Tu resultado fue correcto. Tardaste: "+tiempoTotal+" Segundos.");
 }
 else{
@@ -52,6 +63,10 @@ else{
 console.log("Problema 3");
 var respuesta3=contador(arreglo1);
 document.write("Respuesta 3: "+respuesta3+", ");
+
+console.log("Problema 4");
+var respuesta4=promedio(arreglo2);
+document.write("Respuesta 4: "+respuesta4+", ");
 
 console.log("Problema 5");
 let num = prompt("Dame un número de minimo dos digitos:")
