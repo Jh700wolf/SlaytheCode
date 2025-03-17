@@ -6,6 +6,7 @@ exports.get_agregar_notas = (request, response, next)=>{
     isLoggedIn: request.session.isLoggedIn || false,
     username: request.session.username||'',
     csrfToken: request.csrfToken(),
+    privilegios: request.session.privilegios || [],
 });
 };
 
@@ -23,6 +24,7 @@ exports.post_agregar_notas = (request, response, next)=>{
 };
 
 exports.get_root = (request,response,next)=>{
+  console.log(request.session.privilegios);
   const mensaje =request.session.info || '';
   if(request.session.info){
     request.session.info='';
@@ -36,6 +38,7 @@ exports.get_root = (request,response,next)=>{
         username: request.session.username || '',
         notas:rows,
         info: mensaje,
+        privilegios: request.session.privilegios || [],
       });
     }).catch((error)=>{
       console.log(error);

@@ -37,13 +37,13 @@ INSERT INTO `posee` (`id_rol`, `id_privilegio`, `created_at`) VALUES
 --
 -- Volcado de datos para la tabla `privilegios`
 --
-INSERT INTO `privilegios` (`id`, `nombre`, `created_at`) VALUES
+INSERT INTO `privilegios` (`Idpriv`, `nombre`, `created_at`) VALUES
 (1, 'ver notas', '2025-03-11 18:02:55'),
 (2, 'agregar notas', '2025-03-11 18:02:55');
 --
 -- Volcado de datos para la tabla `roles`
 --
-INSERT INTO `roles` (`id`, `nombre`, `created_at`) VALUES
+INSERT INTO `roles` (`idRol`, `nombre`, `created_at`) VALUES
 (1, 'líder', '2025-03-11 18:01:52'),
 (2, 'colaborador', '2025-03-11 18:01:52'),
 (3, 'superadmin', '2025-03-11 18:02:00');
@@ -55,7 +55,10 @@ INSERT INTO `tiene` (`id_usuario`, `id_rol`, `created_at`) VALUES
 (3, 2, '2025-03-11 18:05:15'),
 (3, 3, '2025-03-11 18:04:44'),
 (4, 2, '2025-03-11 18:05:33'),
-(6, 2, '2025-03-11 18:05:15');
+(6, 2, '2025-03-11 18:05:15'),
+(7, 1, '2025-03-11 18:05:16'),
+(8, 2, '2025-03-11 18:05:17'),
+(9, 3, '2025-03-11 18:05:18');
 --
 -- Volcado de datos para la tabla `usuarios`
 --
@@ -65,7 +68,7 @@ INSERT INTO `usuarios` (`id`, `username`, `password`, `created_at`) VALUES
 (3, 'kami', '$2b$12$Wj183TLUloNrR6hsJ47vm.5uBKx35MqeBSVg107NbnNpTRHKrta.6', '2025-03-10 18:13:39'),
 (4, 'ricardo', '$2b$14$iXVOj7mFo832AHI9qRkK7uVYGh/Tdsw2mYPYNg7nATq/HQQeCUwb.', '2025-03-10 18:16:33'),
 (5, 'ana', '$2b$12$QYMNMgM/estiqafxGIyWvekhL3qU4QF3qurSqZ8ChAw6yAFrsqXzO', '2025-03-10 18:18:35'),
-(6, 'choche', '$2b$12$MliPtTMZe3pZKtAlfiO3/OMZlJXFg6/8QrQy3DFSNTRWH9EcvUjEG', '2025-03-10 18:23:30');
+(6, 'choches', '$2b$12$MliPtTMZe3pZKtAlfiO3/OMZlJXFg6/8QrQy3DFSNTRWH9EcvUjEG', '2025-03-10 18:23:30');
 COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

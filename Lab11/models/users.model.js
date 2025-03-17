@@ -31,5 +31,13 @@ module.exports = class Usuario{
             return this.fetchAll();
         }
     }
+    static getPrivilegios(username) {
+        return db.execute(`
+            SELECT DISTINCT p.nombre
+            FROM privilegios p, posee po, roles r, tiene t, usuarios u
+            WHERE p.Idpriv=po.id_privilegio AND po.id_rol=r.idRol AND r.idRol=t.id_rol 
+                AND u.id=t.id_usuario AND u.username=?`, 
+            [username]);
+    }
 
 }

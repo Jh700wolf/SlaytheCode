@@ -13,6 +13,7 @@ exports.get_signup=(request,response,next)=>{
         info:mensaje,
         warning:'',
         csrfToken: request.csrfToken(),
+        privilegios: request.session.privilegios || [],
     })
 };
 
@@ -44,6 +45,7 @@ exports.get_login=(request,response,next)=>{
         info: mensaje,
         warning: warning,
         csrfToken: request.csrfToken(),
+        privilegios: request.session.privilegios || [],
     });
 };
 
@@ -53,10 +55,15 @@ exports.post_login=(request,response,next)=>{
             const bcrypt = require('bcryptjs');
             bcrypt.compare(request.body.password, rows[0].password).then((doMatch) => {
                 if (doMatch) {
-                    request.session.isLoggedIn = true;
-                    request.session.username = request.body.username;
-                    return request.session.save((error) => {
-                        response.redirect('/notas');
+                    Usuario.getPrivilegios(rows[0].username).then(([privilegios, fieldData]) => {
+                        request.session.privilegios = privilegios;
+                        request.session.isLoggedIn = true;
+                        request.session.username = request.body.username;
+                        return request.session.save((error) => {
+                            response.redirect('/notas');
+                        });
+                    }).catch((error) => {
+                        console.log(error);
                     });
                 } else {
                     request.session.warning = `Usuario y/o contraseña incorrectos`;
