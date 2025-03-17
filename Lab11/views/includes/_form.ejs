@@ -1,6 +1,7 @@
 <!--FORM-->
 <div>
     <form action="/notas/agregar" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <Label>Nombre:</Label>
         <input type="text" placeholder="Nombre" id="nombre" name="nombre">
         <input class="button" type="submit" value="Enviar">

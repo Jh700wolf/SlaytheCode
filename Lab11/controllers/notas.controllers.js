@@ -5,6 +5,7 @@ exports.get_agregar_notas = (request, response, next)=>{
   response.render("agregar_nota",{
     isLoggedIn: request.session.isLoggedIn || false,
     username: request.session.username||'',
+    csrfToken: request.csrfToken(),
 });
 };
 
