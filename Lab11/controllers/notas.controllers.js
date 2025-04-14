@@ -11,8 +11,8 @@ exports.get_agregar_notas = (request, response, next)=>{
 };
 
 exports.post_agregar_notas = (request, response, next)=>{
-  console.log(request.body);
-  const mi_nota=new Nota(request.body.nombre);
+  console.log(request.file);
+  const mi_nota=new Nota(request.body.nombre,request.file.filename);
   mi_nota.save()
   .then(()=>{
     response.redirect('/notas/');
