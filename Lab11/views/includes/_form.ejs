@@ -1,9 +1,17 @@
 <!--FORM-->
 <div>
-    <form action="/notas/agregar" method="POST">
+    <form action="/notas/agregar" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="_csrf" value="<%= csrfToken %>" >
         <Label>Nombre:</Label>
         <input type="text" placeholder="Nombre" id="nombre" name="nombre">
+        <div class="file">
+            <label for="imagen" class="file-label">
+              <input type="file" class="file-input" id="imagen" name="imagen">
+              <span class="file-cta">
+                <span class="file-label"> Escoge una imagen… </span>
+              </span>
+            </label>
+          </div>
         <input class="button" type="submit" value="Enviar">
 
     </form>
